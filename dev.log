@@ -1,0 +1,87 @@
+2024-12-29 20:12:23 - Initialized Keyfinitum project. Project description: Advanced Keyboard and Mouse Customization Software. Core features: Key binding customization, advanced macro capabilities, alternate input layers, profile management, user-friendly UI, cross-device compatibility, local and exportable configurations, extensibility.
+2024-12-29 20:14:33 - Started development of key remapping functionality in src/remapping.rs
+2024-12-29 20:15:00 - Implementing error handling for invalid key codes in remapping functionality
+2024-12-29 20:15:41 - Completed implementation of error handling for key remapping functionality
+2024-12-29 20:15:59 - Implementing serialization/deserialization for remapping configurations
+2024-12-29 20:16:56 - Completed implementation of serialization/deserialization for remapping configurations
+2024-12-29 20:17:32 - Implementing layer-specific remapping functionality
+2024-12-29 20:18:20 - Completed implementation of layer-specific remapping functionality
+2024-12-29 20:18:40 - Implementing profile management functionality
+2024-12-29 20:19:46 - Completed initial implementation of profile management functionality
+2024-12-29 20:21:04 - Completed integration of profile management system
+2024-12-29 20:23:02 - Successfully tested profile management system
+2024-12-29 20:33:11 - Successfully implemented auto-profile switching functionality
+2024-12-29 20:41:07 - Created basic macro functionality structure in src/macro.rs
+2024-12-29 20:42:22 - Added winapi dependency for macro functionality implementation
+2024-12-29 20:43:19 - Implemented macro execution functionality using winapi
+2024-12-29 20:44:23 - Integrated macro functionality with profile system
+2024-12-29 20:45:34 - Implemented macro management in ProfileManager
+2024-12-29 20:46:29 - Added sample 'TestMacro' to default profile
+2024-12-29 20:49:19 - Created basic input layer functionality in src/input_layer.rs
+2024-12-29 20:50:38 - Integrated input layer functionality with profile system
+2024-12-29 20:54:10 - Created basic UI structure and integrated with main application
+2024-12-29 21:07:00 - Fixed compilation errors and completed input layer implementation
+2024-12-29 21:28:27 - Fixed remaining compilation errors, cleaned up unused imports and variables, and ensured proper serde implementations
+2024-12-29 21:30:46 - Resolved ProfileManager lifetime issue in main.rs and fixed unused variable warnings in ui.rs
+2024-12-29 21:33:37 - Implemented profile switching functionality in the UI
+2024-12-29 21:42:37 - Continuing development on Keyfinitum project. Focusing on enhancing macro creation capabilities and improving UI responsiveness. Addressing unused code warnings in macro.rs. Project now compiles with warnings for unimplemented features.
+2024-12-29 21:49:56 - Completed implementation of keyboard input recording functionality in MacroRecorder struct. The recorder can now capture key presses and releases for A-Z, 0-9, and common special keys.
+2024-12-29 21:56:56 - Started implementation of macro visual editor. Creating UI components for drag-and-drop macro creation and timeline-based editing.
+2024-12-29 21:58:04 - Completed initial implementation of macro visual editor. Added timeline view, action blocks, and basic controls for adding/removing macro actions.
+2024-12-29 21:59:25 - Fixed compilation errors in macro visual editor implementation. Added missing imports for MacroAction and Duration, corrected method name from click_pos to clicked_pos.
+2024-12-29 22:00:55 - Fixed remaining compilation errors in macro visual editor. Corrected MacroAction import path and updated method name to interact_pointer_pos.
+2024-12-29 22:02:09 - Properly fixed MacroAction import using r#macro syntax to handle Rust keyword conflict.
+2024-12-29 22:04:58 - Successfully fixed all compilation errors. Project now builds with warnings about unused code.
+2024-12-29 22:06:59 - Started implementation of timeline zoom functionality in macro visual editor. Adding zoom controls and scaling logic for macro action blocks.
+2024-12-29 22:07:44 - Completed implementation of timeline zoom functionality in macro visual editor. Added zoom controls with slider and +/- buttons, and integrated zoom scaling with macro action blocks.
+2024-12-29 22:10:17 - Started implementation of macro action block dragging functionality in macro visual editor. Adding support for dragging and repositioning action blocks on the timeline.
+2024-12-29 22:11:46 - Completed implementation of macro action block dragging functionality. Delay actions can now be dragged to adjust their duration on the timeline.
+2024-12-29 22:13:05 - Started implementation of macro action block resizing functionality. Adding support for resizing delay actions by dragging their edges.
+2024-12-29 22:14:02 - Completed implementation of macro action block resizing functionality. Delay actions can now be resized by dragging their left or right edges.
+2024-12-29 22:15:50 - Implementing actual key remapping functionality. Adding support for remapping keyboard keys to custom actions and system commands.
+2024-12-29 22:20:49 - Started implementation of advanced keyboard input recording functionality in MacroRecorder struct. Adding support for capturing key combinations, modifier keys, and special function keys.
+2024-12-29 22:21:33 - Enhancing MacroRecorder to track modifier key states and handle key combinations more effectively. Adding support for additional special function keys (F1-F24, media keys, etc.).
+2024-12-29 22:22:45 - Completed implementation of modifier key tracking and key combination recording in MacroRecorder. The recorder now accurately captures modifier states (Shift, Control, Alt) and records key combinations with modifiers.
+2024-12-29 22:23:58 - Implemented key combination execution with modifiers in Macro struct. The execute method now properly handles modifier keys when executing recorded macros, ensuring correct key combination behavior.
+2024-12-29 22:25:12 - Integrated macro recording and execution controls into the UI. Added Start/Stop Recording and Execute Macro buttons, along with macro listing and management functionality in the Macros section.
+2024-12-29 22:26:45 - Enhanced profile auto-switching functionality with window title matching and process path verification for more accurate profile switching. Added flexible application mapping system with optional window title patterns.
+2024-12-29 22:27:56 - Implemented UI controls for managing application mappings in profile settings. Added application mapping editor window with current mappings list and new mapping creation form.
+2024-12-29 22:28:37 - Enhanced Profile struct with application mappings functionality. Added methods for adding/removing mappings and saving/loading mappings to/from disk.
+2024-12-29 22:29:12 - Implemented automatic profile switching based on active application. Added auto_switch_profile method that matches both application name and window title patterns.
+2024-12-29 22:30:45 - Integrated application monitoring service into main application. The background thread now uses the auto_switch_profile method to handle profile switching based on active applications.
+2024-12-29 22:31:56 - Added monitoring service controls to the UI, including start/stop buttons and status display. The monitoring service can now be controlled directly from the application interface.
+2024-12-29 22:32:45 - Implemented monitoring service stop functionality in ProfileManager. Added thread management and stop signal to allow clean termination of the monitoring service.
+2024-12-29 22:33:45 - Integrated monitoring service stop functionality into the UI. The stop button now properly terminates the monitoring service thread.
+2024-12-29 22:37:29 - Fixed remaining instances of unescaped 'macro' keyword in ui.rs. Properly escaped all occurrences using r#macro syntax to handle Rust keyword conflict.
+2024-12-29 22:55:11 - Started implementation of cross-device compatibility features. Adding support for various keyboard and mouse devices, including devices with advanced features like DPI switches.
+2024-12-29 22:55:27 - Created device management module in src/device.rs. Implemented basic structure for device detection and management, including device type classification and capability tracking.
+2024-12-29 22:56:09 - Updated Cargo.toml with HID feature for winapi to support device management functionality.
+2024-12-29 22:57:07 - Integrated device management module with main application. Initialized DeviceManager in main.rs and added device module to project structure.
+2024-12-29 23:06:40 - Fixed winapi dependency issue by updating Cargo.toml with correct HID-related features (hidpi, hidusage, hidsdi) for device management functionality.
+2024-12-29 23:07:15 - Fixed documentation and import issues in ui.rs. Converted inner doc comment to outer doc comment and removed duplicate imports.
+2024-12-30 01:49:22 - Git Push - Commit 9ade186: Initial commit: Implemented core Keyfinitum functionality with key remapping, profile management, macro system, input layers, device management, and UI components.
+2024-12-30 01:57:26 - Implemented device detection logic in DeviceManager using winapi HID features. Added support for detecting keyboard and mouse devices, identifying their capabilities (DPI switch, macro keys, media controls), and managing device connections through the Windows HID interface.
+2024-12-30 01:58:17 - Added device management UI components. Implemented a new Devices section in the main interface showing connected devices with their types (keyboard/mouse), capabilities, and device-specific controls. Added refresh functionality for device detection and placeholder controls for DPI adjustment.
+2024-12-30 01:59:12 - Implemented DPI control functionality for mouse devices. Added methods to get/set DPI values, increase/decrease DPI with step control, and proper error handling. Enhanced InputDevice struct with DPI-related fields (current, min, max, step) and implemented HID feature report communication for DPI adjustments.
+2024-12-30 01:59:54 - Connected DPI control UI to device functionality. Enhanced device display to show current DPI value, DPI range, and step size. Implemented error handling for DPI adjustment operations in the UI.
+2024-12-30 02:01:42 - Enhanced key remapping functionality with comprehensive features: modifier key support (Shift, Ctrl, Alt), key combinations, mouse controls (buttons, movement, wheel), layer switching, and configuration persistence. Added proper error handling and serialization support for remapping configurations.
+2024-12-30 02:04:33 - Implemented comprehensive key remapping UI with visual editor. Added support for creating and editing key bindings with modifiers, multiple action types (key press, sequences, mouse controls, system commands, macros, media controls), and layer management. Enhanced UI with intuitive controls and proper validation.
+2024-12-30 02:06:28 - Fixed compilation errors in device.rs by adding missing 'setupapi' feature to winapi dependency in Cargo.toml. This enables proper device detection and management functionality through the Windows Setup API.
+2024-12-30 02:07:28 - Added missing winapi features (fileapi, handleapi, hidclass) to Cargo.toml to support file operations, handle management, and HID device class functionality.
+2024-12-30 02:08:36 - Added PartialEq trait implementations for DeviceType, MouseButton, and MediaAction enums to enable comparison operations in UI components and device management logic.
+2024-12-30 02:09:10 - Fixed mutability and type mismatch issues in device.rs. Corrected pointer types for SetupDiGetDeviceInterfaceDetailA calls and updated HIDD_ATTRIBUTES import to use correct module.
+2024-12-30 02:10:51 - Fixed borrowing issues in ui.rs. Restructured device management section to avoid multiple mutable borrows and improved remapping editor window state management.
+2024-12-30 02:12:04 - Fixed hidsdi imports in device.rs by moving them from winapi::um to winapi::shared namespace. Updated all related function calls to use the correct module path.
+2024-12-30 02:12:46 - Fixed borrowing issues in remapping.rs by restructuring create_modifier_key call to avoid simultaneous mutable and immutable borrows. Also fixed unused variable warning in send_media_control.
+2024-12-30 02:14:45 - Fixed type mismatches in device.rs by properly handling HIDP_PREPARSED_DATA and c_void pointer conversions. Added proper type casting for HID function calls and buffer pointers.
+2024-12-30 02:15:37 - Fixed remaining borrowing issue in remapping.rs by storing active_layer_index before using it to avoid simultaneous mutable and immutable borrows in add_binding method.
+2024-12-30 02:16:46 - Fixed syntax error in ui.rs by correcting mismatched braces in remapping editor window section.
+2024-12-30 02:17:47 - Restructured ui.rs to properly implement eframe::App trait and separate UI components into distinct sections. Fixed window management and panel organization.
+2024-12-30 02:19:01 - Added MacroEditor and RemappingEditor type definitions in ui.rs editor module. Removed unnecessary imports and fixed collection handling in device listing.
+2024-12-30 02:20:21 - Fixed c_void type mismatches in device.rs by using winapi::ctypes::c_void consistently. Consolidated hidpi imports and updated pointer type casts.
+2024-12-30 02:21:01 - Fixed constructor parameter in main.rs to properly pass CreationContext to KeyfinitumApp::new. Simplified main function and removed unused imports.
+2024-12-30 02:21:59 - Removed unused imports from main.rs (Arc, Mutex, ProfileManager) to clean up dependencies.
+2024-12-30 02:22:57 - Fixed borrowing issues in ui.rs by introducing DeviceInfo struct and cloning device data. Added underscore prefix to unused variables.
+2024-12-30 02:23:49 - Added missing DeviceCapabilities import in ui.rs to fix type resolution error.
+2024-12-30 08:00:05 - Created plugin system structure in src/plugin.rs. Implemented PluginManager, Plugin trait, and PluginContext with basic plugin loading/unloading functionality.
+2024-12-30 08:02:40 - Integrated PluginManager into KeyfinitumApp UI structure. Added plugin_manager field and initialization in KeyfinitumApp::new() function.
